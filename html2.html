@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>フレンドリー・フード - レストラン検索</title>
+    <style>
+        body { font-family: "メイリオ", Meiryo, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .section { margin-bottom: 40px; border-bottom: 1px solid #eee; padding-bottom: 30px; }
+        .header { text-align: center; font-size: 2.5em; color: #2c3e50; margin: 30px 0; }
+        .form-group { margin: 15px 0; }
+        input, select { padding: 8px; width: 250px; }
+        .restaurant-card { background: #f9f9f9; padding: 15px; margin: 10px 0; border-radius: 8px; }
+        .rating { color: #e67e22; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <!-- ページ1: ヘッダー -->
+    <div class="header">フレンドリー・フード</div>
+
+    <!-- ページ2: ログイン -->
+    <div class="section" id="login">
+        <h2>ログイン</h2>
+        <div class="form-group">
+            <label>メールアドレス:</label><br>
+            <input type="email" placeholder="メールアドレスを入力">
+        </div>
+        <div class="form-group">
+            <label>パスワード:</label><br>
+            <input type="password" placeholder="パスワードを入力">
+        </div>
+        <div class="form-group">
+            <input type="checkbox"> ログイン状態を保持
+        </div>
+        <button style="background: #3498db; color: white; padding: 10px 20px; border: none; border-radius: 4px;">ログイン</button>
+        <p>新規登録はこちら <a href="#signup">新規登録</a></p>
+        <p><a href="#forgot">パスワードを忘れた場合</a></p>
+    </div>
+
+    <!-- ページ3: 設定 -->
+    <div class="section" id="preferences">
+        <h2>食事設定</h2>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+            <div>
+                <h3>宗教</h3>
+                <select>
+                    <option>イスラム教</option>
+                    <option>ヒンドゥー教</option>
+                    <option>その他</option>
+                </select>
+            </div>
+            <div>
+                <h3>料理の種類</h3>
+                <select>
+                    <option>中華料理</option>
+                    <option>インド料理</option>
+                    <option>その他</option>
+                </select>
+            </div>
+            <div>
+                <h3>アレルギー</h3>
+                <input type="checkbox"> 乳製品<br>
+                <input type="checkbox"> 大豆<br>
+                <input type="checkbox"> その他
+            </div>
+            <div>
+                <h3>辛さレベル</h3>
+                <input type="radio" name="spice"> マイルド<br>
+                <input type="radio" name="spice"> 中辛<br>
+                <input type="radio" name="spice"> 激辛
+            </div>
+            <div>
+                <h3>予算（円）</h3>
+                <input type="number" placeholder="予算を入力">
+            </div>
+            <div>
+                <h3>最大カロリー</h3>
+                <input type="number" placeholder="カロリーを入力">
+            </div>
+        </div>
+        <button style="background: #27ae60; color: white; padding: 10px 20px; border: none; border-radius: 4px; margin-top: 20px;">設定完了</button>
+    </div>
+
+    <!-- ページ4: 検索結果 -->
+    <div class="section" id="results">
+        <h2>近くのレストラン</h2>
+        <input type="text" placeholder="エリアを検索..." style="width: 100%; padding: 10px; margin-bottom: 20px;">
+        
+        <div class="restaurant-card">
+            <div class="rating">4.2 ★</div>
+            <h3>アジアン・パーム</h3>
+            <p>渋谷ホー</p>
+            <p>「リーズナブルな価格で美味しい料理」</p>
+        </div>
+
+        <div class="restaurant-card">
+            <div class="rating">4.8 ★</div>
+            <h3>ミニ・インディアンレストラン</h3>
+            <p>西新宿</p>
+            <p>「素晴らしい料理と迅速なサービス...」</p>
+        </div>
+    </div>
+</body>
+</html>
